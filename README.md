@@ -14,3 +14,9 @@
     ![Borrar Node](assets/img/BorrarNode.png)
     - Reinstalarlo, con una version mas actual 
     ![Reinstalar](assets/img/Reinstalar.png)
+    - Comprobamos
+    ![Comprobamos versiones ](assets/img/comprobamos.png)
+    -Borramos expres por si da fallos
+    ![Borrar expres y instalarlo](assets/img/borramosexpress.png)
+- Ya funcionaria y estaria la aplicacion escuchando por el puerto dicho "3000", para acceder tenemos que saber la ip y poner :3000
+![Hello world](assets/img/Helloworld.png)
