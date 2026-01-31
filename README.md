@@ -48,3 +48,28 @@
 - Y ahora ejecutamos la otra aplicacion que si tiene clusters y ejecutamos lo mismo para ello usamos node "nombre de app con cluster" y comprobamos 
 ![Comprobamos load con cluster](assets/img/loadcloster1.png)
 ![Comprobamos load con cluster y mas solicitudes](assets/img/loadcloster2.png)
+
+## Uso de PM2 para administrar un clúster de Node.js
+- Necesitmos instalarnos pm2 usaremos el comando "npm install pm2 -g" y conprobamos
+![Instalacion pm2](assets/img/pm2.png)
+- Lo siguiente es iniciar la aplicaccion sin cluster
+![Iniciamos pm2](assets/img/pm2sinclusterinicio.png)
+
+- lo siguiente es descargarnos  pm2 ecosystme "pm2 ecosystem"
+![Instalacion pm2 ecosystem](assets/img/instalamosecosystem.png)
+- esto automaticamente nos crea un archivo "ecosystem.config.js" cual tenemos que configurar.
+![Configuracion pm2 ecosystem](assets/img/configecosystem.png)
+iniciamos
+![iniciamos pm2 ecosystem](assets/img/iniciamoseco.png)
+    - pm2 ls 
+    ![pm2 ls](assets/img/pm2ls.png)
+    - pm2 log
+    ![pm2 logs](assets/img/pm2log.png)
+    - pm2 monit
+    ![pm2 logs](assets/img/pm2monit.png)
+
+## Cuestionario 
+¿Sabrías decir por qué en algunos casos concretos, como este, la aplicación sin clusterizar tiene
+mejores resultados?
+
+- En algunos casos la aplicación sin clúster funciona incluso mejor porque montar un clúster también tiene su trabajo. Al final hay que crear varios procesos y repartir las peticiones entre ellos, y eso consume recursos. Cuando las peticiones son rápidas y la CPU no está muy cargada, un solo proceso puede manejarlas sin problema y va más directo. Por eso, en situaciones así, usar varios workers no aporta gran cosa y la aplicación sin clúster puede rendir mejor.
