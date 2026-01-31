@@ -36,3 +36,15 @@
 ![Lenta](assets/img/lenta.png)
 ![Rapida](assets/img/rapida.png)
 (Esto es debido a que se crean varios procesos workers que comparten el mismo puerto, y las peticiones se distribuyen entre ellos, permitinedo atender a multiples solicitudes evitando bloqueos)
+
+## Metricas de rendimiento
+-Instalamos loadtest
+![Instalamos loadtest](assets/img/instalamosloadtest.png)
+- comprobamos con "loadtest http://localhost:3000/api/500000 -n 1000 -c 100"
+![Comprobamos load](assets/img/comprobamosload.png)
+- Ahora lo comprobamos con mas solicitudes "loadtest http://localhost:3000/api/50000000 -n 1000 -c 100"
+![Comprobamos load con mas solicitudes](assets/img/massolicitudes.png)
+
+- Y ahora ejecutamos la otra aplicacion que si tiene clusters y ejecutamos lo mismo para ello usamos node "nombre de app con cluster" y comprobamos 
+![Comprobamos load con cluster](assets/img/loadcloster1.png)
+![Comprobamos load con cluster y mas solicitudes](assets/img/loadcloster2.png)
